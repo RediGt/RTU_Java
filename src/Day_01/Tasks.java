@@ -1,6 +1,6 @@
 package Day_01;
 
-import Day_04.Task5;
+import Day_05.Task6;
 
 public class Tasks 
 {
@@ -8,6 +8,6 @@ public class Tasks
 	{		
 		//Task1.Task1();
 		//Task5.Task();
-	}
-		
+		Task6.Task();		
+	}		
 }
