@@ -3,6 +3,7 @@ import java.util.Arrays;
 
 public class Task7 
 {
+	//Multiplication table
 	public static void Task()
 	{
 		int[][] arr = new int[10][10];
