@@ -33,14 +33,25 @@ public class Task6
 	
 	private static void BubbleSortToLargest(int[] arr) 
 	{
-	    int n = arr.length;
-	    for (int i = 0; i < n - 1; i++)
-	        for (int j = 0; j < n - i - 1; j++)
-	           if (arr[j] > arr[j + 1]) 
-	           {
-			       int temp = arr[j];
-			       arr[j] = arr[j + 1];
-			       arr[j + 1] = temp;
-	           }
+	    int tempChanges = 0;
+	    int changes = 0;
+	    
+	    for (int i = 0; i < arr.length - 1; i++)
+	    {
+		    for (int j = 0; j < arr.length - i - 1; j++)
+		    {
+		       if (arr[j] > arr[j + 1]) 
+		       {
+				   int temp = arr[j];
+				   arr[j] = arr[j + 1];
+				   arr[j + 1] = temp;
+				   changes++;
+		       }
+		    }
+		    if (tempChanges == changes)
+		    	break;
+		    else
+		    	tempChanges = changes;
+	    }
 	}
 }
