@@ -10,12 +10,12 @@ public class Pica
 		billForPica();
 	}
 	
-	public String size;
-	public int count;
-	public String name;
-	public double sizeQuatient = 1;
+	private String size;
+	private int count;
+	private String name;
+	private double sizeQuatient = 1;
 	
-	public void billForPica()
+	private void billForPica()
 	{
 		double bill = 0;
 		SetSizeQuatient();
@@ -40,7 +40,7 @@ public class Pica
 			System.out.println("The order price for " + this.count + " of " + this.name + " is " + bill);
 	}
 	
-	public void SetSizeQuatient()
+	private void SetSizeQuatient()
 	{
 		if (this.size == "Big")
 			this.sizeQuatient = 2;
