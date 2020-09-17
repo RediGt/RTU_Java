@@ -4,6 +4,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
+//izveido sarakstu, aizpilda ar 5 elementiem un pēc katra elementa ievieto elementu, 
+//kura vērtība ir vienāda ar saraksta pēdējā elementa vērtību
+
 public class Task14 
 {
 	public static void Task()

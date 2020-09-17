@@ -2,6 +2,9 @@ package Day_08;
 
 import java.util.Scanner;
 
+//izveido rakstzīmju virkni, tajā atrod apakšvirkni, kas sākas ar 5. rakstzīmi un ir 3 burtu gara, 
+//kā arī aizvieto visus G burtus (gan lielos, gan mazos) ar mazo f burtu
+
 public class Task13 
 {
 	public static void Task()

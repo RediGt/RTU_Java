@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+//izveido dinamisko masīvu, aizpilda to ar 8 gadījuma skaitļiem un pēc tam papildina masīvu ar elementu, 
+//kura vērtība ir vienāda ar pirmo 8 elementu summu, un elementu, kura vērtība ir vienāda ar 3. un 4. 
+//elementa reizinājumu
+
 public class Task12 
 {
 	public static void Task()
@@ -16,6 +20,7 @@ public class Task12
 		
 		intArray.add(sumArrElements(intArray, 8));
 		intArray.add(intArray.get(2) * intArray.get(3));
+		
 		System.out.println("\n\nArray with 9th and 10th element:");
 		printArr(intArray);				
 	}
