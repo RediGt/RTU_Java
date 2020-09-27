@@ -1,5 +1,10 @@
 package Day_10;
 
+//1. bāzes klase Transportlīdzeklisar atribūtiem, kas piemīt jebkāda veida transportlīdzekļiem, 
+//un divas apakšklases ar specifiskiem atribūtiem, kas piemīt tikai attiecīgai apakšklasei
+
+//2. nodrošināt lietotājam iespēju ar get() un set() metodēm mainīt apakšklašu atribūtu vērtības
+
 public class Task16 
 {
 	public static void Task()

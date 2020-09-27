@@ -2,6 +2,11 @@ package Day_09;
 
 import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.ParseException;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -22,6 +27,7 @@ public class Task15
 		String userVisitDate = "";
 		String userVisitTime = "";
 		String userVisitPurpose = "";
+		Scanner myReader;
 		
 		userName = validateUserName();
 		userPhone = validatePhoneNumber();
@@ -31,6 +37,39 @@ public class Task15
 		System.out.println("Hello, " + userName + " with phone " + userPhone);
 		System.out.println("Visit date is " + userVisitDate + ", visit time is " + userVisitTime);
 		System.out.println("Visit purpose : " + userVisitPurpose);
+		
+		//Write to file
+		try 
+		{
+			FileWriter myFile = new FileWriter("Order.txt", true);
+			PrintWriter writeIntoFile = new PrintWriter(myFile);
+			
+				writeIntoFile.printf("%s %s %s %s %s\n", userName,
+						userPhone, userVisitDate, userVisitTime, userVisitPurpose);
+				myFile.close();
+				System.out.println("Successfully saved!\n");
+		} 
+		catch (IOException ex) 
+		{
+			System.out.println("An error occurred.");
+		}
+		
+		//Read from file
+		try 
+		{
+			String data;
+			File myFile = new File("Order.txt");
+			myReader = new Scanner(myFile);
+			while (myReader.hasNextLine()) 
+			{
+				data = myReader.nextLine();
+				System.out.println(data);
+			}
+			myReader.close();
+		} 
+		catch (FileNotFoundException e) {
+			System.out.println("File has not been found!");
+		}
 	}
 	
 	public static String validateUserName()
