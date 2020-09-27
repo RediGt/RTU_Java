@@ -1,4 +1,4 @@
-package Day10;
+package Day_10;
 
 public class Task16 
 {
